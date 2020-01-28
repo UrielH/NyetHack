@@ -15,7 +15,20 @@ fun main () {
    // beverage = null
 
     // Using non-null assertion operator
-    var beverage = readLine()!!.capitalize()
+/*    var beverage = readLine()!!.capitalize()
 
-    print(beverage)
+    print(beverage)*/
+
+    var beverage = readLine()
+    //beverage = null
+
+    if(beverage != null) {
+        beverage = beverage.capitalize()
+    } else {
+        print("I can't do that without crashing - beverage was null!")
+    }
+    beverage = null
+
+    val beverageServerd: String = beverage ?: "Buttered Ale"
+    print(beverageServerd)
 }
