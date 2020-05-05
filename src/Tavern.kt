@@ -27,8 +27,7 @@ fun main () {
     } else {
         print("I can't do that without crashing - beverage was null!")
     }
-    beverage = null
 
-    val beverageServerd: String = beverage ?: "Buttered Ale"
-    print(beverageServerd)
+    val beverageServed: String = beverage ?: "Buttered Ale"
+    print(beverageServed)
 }
