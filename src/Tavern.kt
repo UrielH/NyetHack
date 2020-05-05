@@ -1,24 +1,24 @@
-fun main () {
+fun main() {
     //Using safe call operator
- /*   var beverage = readLine()?.capitalize()
-    beverage = null
-     print(beverage)*/
+    /*   var beverage = readLine()?.capitalize()
+       beverage = null
+        print(beverage)*/
 
     // Using let operator + safe call operator
-  /*  var beverage = readLine()?.let {
-        if(it.isNotBlank()){
-            it.capitalize()
-        } else {
-            "Buttered Ale"
-        }
-    }*/
-   // beverage = null
+    /*  var beverage = readLine()?.let {
+          if(it.isNotBlank()){
+              it.capitalize()
+          } else {
+              "Buttered Ale"
+          }
+      }*/
+    // beverage = null
 
     // Using non-null assertion operator
 /*    var beverage = readLine()!!.capitalize()
 
     print(beverage)*/
-
+/*
     var beverage = readLine()
     //beverage = null
 
@@ -29,5 +29,15 @@ fun main () {
     }
 
     val beverageServed: String = beverage ?: "Buttered Ale"
-    print(beverageServed)
+    print(beverageServed)*/
+
+    var beverage = readLine()?.let {
+        if (it.isNotBlank()) {
+            it.capitalize()
+        } else {
+            "Buttered Ale"
+        }
+    }
+
+    print(beverage)
 }
